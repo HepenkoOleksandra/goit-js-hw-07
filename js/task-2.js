@@ -27,3 +27,27 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const ulElem = document.querySelector('ul');
+
+function imageTemplate(obj) {
+  const url = obj.url;
+  const alt = obj.alt;
+  return `<li class="item-animals">
+        <img
+          class="img-animals"
+          src="${url}"
+          alt="${alt}"
+          width="340"
+        />
+      </li>`;
+}
+const markup = images.map(imageTemplate).join('\n\n');
+
+ulElem.insertAdjacentHTML('afterbegin', markup);
+
+console.log(ulElem);
+
+
+
+

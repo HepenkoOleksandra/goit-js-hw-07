@@ -12,3 +12,21 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+.gallery {
+  list-style: none;
+  display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item-animals {
+  border: #0b7726 solid 3px;
+  border-radius: 5px;
+}
+
+.img-animals {
+  display: block;
+   max-width: 100%;
+   height: auto;
+}
