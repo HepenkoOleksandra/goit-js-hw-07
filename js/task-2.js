@@ -28,20 +28,22 @@ const images = [
   },
 ];
 
-const ulElem = document.querySelector('ul');
+const ulElem = document.querySelector('.js-gallery');
 
 function imageTemplate(obj) {
   const url = obj.url;
   const alt = obj.alt;
-  return `<li class="item-animals">
-        <img
-          class="img-animals"
-          src="${url}"
-          alt="${alt}"
-          width="340"
-        />
-      </li>`;
+  
+  return `
+    <li class="gallery-animals-item">
+      <img
+        class="gallery-animals-img"
+        src="${url}"
+        alt="${alt}"
+      />
+    </li>`;
 }
+
 const markup = images.map(imageTemplate).join('\n\n');
 
 ulElem.insertAdjacentHTML('afterbegin', markup);
