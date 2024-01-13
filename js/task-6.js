@@ -14,36 +14,38 @@ function onNumberElemInput() {
 
 function onBtnCreateClick() {
   boxElem.innerHTML = '';
-  const number = numberElem.value;
+  
+  const number = onNumberElemInput();
+
   if (number < 0 || number > 100) {
     return;
-}
-createBoxes(onNumberElemInput())
-  function createBoxes(amount) {
-    const boxes = [];
-    let boxWidth = 30;
-    let boxHeight = 30;
-    for (let i = 0; i < amount; i++) {
-      const color = getRandomHexColor();
-      const boxElem = document.createElement('div');
-      boxElem.style.backgroundColor = color;
-      boxElem.style.width = `${boxWidth}px`;
-      boxElem.style.height = `${boxHeight}px`;
-      boxWidth += 10;
-      boxHeight += 10;
-      boxes.push(boxElem);
-}
-    boxElem.append(...boxes); 
+  } else {
+    createBoxes(number);
   }
+    
   numberElem.value = '';
 }
 
-function onBtnDestroy() {
-boxElem.innerHTML = '';
-// function destroyBoxes() {
+function createBoxes(amount) {
+  const boxes = [];
   
-// }
+  let boxSize = 30;
+    
+  for (let i = 0; i < amount; i++) {
+    const color = getRandomHexColor();
+    const box = document.createElement('div');
+    box.style.backgroundColor = color;
+    box.style.width = `${boxSize}px`;
+    box.style.height = `${boxSize}px`;
+    boxSize += 10;
+    boxSize += 10;
+    boxes.push(box);
+}
+    boxElem.append(...boxes); 
+}
 
+function onBtnDestroy() {
+  boxElem.innerHTML = '';
 }
 
 function getRandomHexColor() {
@@ -57,7 +59,3 @@ function getRandomHexColor() {
 
 
 
-// console.log(numberElem);
-// console.log(btnCreate);
-// console.log(btnDestroy);
-// console.log(boxElem);

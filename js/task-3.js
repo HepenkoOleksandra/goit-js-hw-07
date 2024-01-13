@@ -1,22 +1,16 @@
 
-const userName = document.querySelector('input#name-input');
-const spanName = document.querySelector('span#name-output')
+const userName = document.querySelector('#name-input');
+const spanName = document.querySelector('#name-output')
 
-userName.addEventListener('input', onInputInput)
+userName.addEventListener('input', onUserNameInput)
 
-function onInputInput() {
+function onUserNameInput() {
     const name = userName.value.trim();
-    // spanName.textContent = name || 'Anonymous';
-   console.log(name);
+    
     if (name === "") {
         spanName.textContent = 'Anonymous';
     } else {
-       spanName.textContent = name; 
-    }
-    
-    
-    
+        spanName.textContent = name; 
+    }    
 }
 
-console.log(userName.value);
-console.log(spanName.textContent);

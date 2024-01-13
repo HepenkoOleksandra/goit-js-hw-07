@@ -1,5 +1,5 @@
 
-const form = document.querySelector('.login-form');
+const form = document.querySelector('.js-login-form');
 
 form.addEventListener('submit', onFormSubmit)
 
@@ -23,3 +23,7 @@ function onFormSubmit(event) {
 
     form.reset();
 }
+
+
+
+

@@ -17,7 +17,7 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  /* text-decoration: none; */
+  list-style: none;
 }
 
 /* task-1 */
@@ -40,7 +40,6 @@ ul {
   border-radius: 8px;
   background: #d0d0f3;
   width: 392px;
-  /* list-style: none; */
 }
 
 .categories-title {
@@ -100,10 +99,270 @@ ul {
   width: 360px;
   height: 300px;
   flex-shrink: 0;
-
 }
 
 .gallery-animals-img {
   width: 100%;
   height: 100%;
 }
+
+
+/* task-3 */
+
+.input {
+  color: #2E2F42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 360px;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 8px 0px 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: transparent;
+}
+
+.input::placeholder {
+  color: #4348a7;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.input:hover {
+  border: 2px solid #000
+}
+
+.say-hello {
+  color: #3b3f94;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.04;
+}
+
+
+/* task-4 */
+
+.login-form {
+  display: inline-flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #FFF;
+  width: 408px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  color: #2E2F42;
+  
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.form-input {
+  width: 360px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: transparent;
+}
+
+.form-input:hover {
+  border: 2px solid #000
+}
+
+.form-btn {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #4E75FF;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.form-btn:hover {
+  background: #6C8CFF;
+}
+
+
+/* task-5 */
+
+.widget {
+  padding: 100px 88px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  background: #FFF;
+  width: 345px;
+  height: 280px;
+}
+
+.color {
+  color: #2E2F42;
+  font-family: Montserrat;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.change-color {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #4E75FF;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.change-color:hover {
+  background: #6C8CFF;
+}
+
+
+/* task-6 */
+
+.controls-element {
+  display: flex;
+  padding: 32px;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 8px;
+  background: #F6F6FE;
+  width: 486px;
+  height: 104px;
+}
+
+.controls-input {
+  display: flex;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  outline: transparent;
+  color: #2E2F42;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.controls-input:hover {
+  border: 2px solid #000;
+}
+
+.create-btn {
+  display: flex;
+  width: 120px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #4E75FF;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 120px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.create-btn:hover {
+  background: #6C8CFF;
+}
+
+.destroy-btn {
+  display: flex;
+  width: 120px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #FF4E4E;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 120px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.destroy-btn:hover {
+  background: #FF7070;
+}
+
+.boxes-element {
+  margin-top: 16px;
+  display: flex;
+  width: auto;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 8px;
+  background: #F6F6FE;
+}
+
+
+
+
+
+
+
+
