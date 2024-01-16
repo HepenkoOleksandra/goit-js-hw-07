@@ -1,10 +1,10 @@
 
-const ulElem = document.querySelector('.js-categories');
+const categoryList = document.querySelector('#categories');
 
-const liElem = ulElem.children;
-console.log(`Number of categories: ${liElem.length}`);
+const categoryItem = categoryList.children;
+console.log(`Number of categories: ${categoryItem.length}`);
 
-const elemTitleList = [...liElem].forEach(elem => {
-    console.log(`Category: ${elem.firstElementChild.textContent}`);
-    console.log(`Elements: ${elem.lastElementChild.children.length}`);
+[...categoryItem].forEach(category => {
+    console.log(`Category: ${category.firstElementChild.textContent}`);
+    console.log(`Elements: ${category.lastElementChild.children.length}`);
 })

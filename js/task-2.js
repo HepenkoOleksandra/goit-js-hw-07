@@ -28,7 +28,7 @@ const images = [
   },
 ];
 
-const ulElem = document.querySelector('.js-gallery');
+const galleryList = document.querySelector('.gallery');
 
 function imageTemplate(obj) {
   const url = obj.url;
@@ -46,9 +46,28 @@ function imageTemplate(obj) {
 
 const markup = images.map(imageTemplate).join('\n\n');
 
-ulElem.insertAdjacentHTML('afterbegin', markup);
+galleryList.insertAdjacentHTML('afterbegin', markup);
 
-console.log(ulElem);
+
+
+function renderTemplate(images) {
+  const gallery = images.map(({ url, alt }) => {
+    const liElem = document.createElement('li');
+    liElem.classList.add('gallery-animals-item');
+    const imgElem = document.createElement('img');
+    imgElem.classList.add('gallery-animals-img');
+    imgElem.setAttribute('src', url);
+    imgElem.setAttribute('alt', alt);
+    liElem.append(imgElem);
+    return liElem;
+  });
+ 
+  return galleryList.append(...gallery);
+  }
+
+renderTemplate(images);
+
+
 
 
 

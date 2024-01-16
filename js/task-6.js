@@ -4,26 +4,24 @@ const btnCreate = document.querySelector('button[data-create]');
 const btnDestroy = document.querySelector('button[data-destroy]');
 const boxElem = document.querySelector('#boxes');
 
-numberElem.addEventListener('input', onNumberElemInput);
+// numberElem.addEventListener('input', onNumberElemInput);
 btnCreate.addEventListener('click', onBtnCreateClick);
 btnDestroy.addEventListener('click', onBtnDestroy)
 
-function onNumberElemInput() {
-  return numberElem.value;
-}
+// function onNumberElemInput() {
+//   return numberElem.value;
+// }
 
 function onBtnCreateClick() {
   boxElem.innerHTML = '';
   
-  const number = onNumberElemInput();
+  const number = numberElem.value;
 
-  if (number < 0 || number > 100) {
+  if (number < 1 || number > 100) {
     return;
   } else {
     createBoxes(number);
-  }
-    
-  numberElem.value = '';
+  } 
 }
 
 function createBoxes(amount) {
@@ -38,10 +36,10 @@ function createBoxes(amount) {
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     boxSize += 10;
-    boxSize += 10;
     boxes.push(box);
 }
-    boxElem.append(...boxes); 
+  boxElem.append(...boxes); 
+  numberElem.value = '';
 }
 
 function onBtnDestroy() {
